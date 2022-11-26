@@ -1,22 +1,23 @@
 DropdownListItem
-  Hitbox `${on_click}`
+  Hitbox `.on_click`
+  Text `${item}`
 
 Dropdown
-  Hitbox `${on_click}`
-  Text `${active}` 2,2
+  Hitbox `.on_click`
+  Text `.active` 2,2
   Icon drop -8,0,8,-0
-  List `${drops}`
-    DropdownListItem
+  `.is_open`
+    List<DropdownListItem> `${drops}`
+  Value `${selected_index}`
 
-List
+List<Content>
   ScrollableView
-    `${items: Item0 Item1}`
-    `${content}` `${.Item0}` 0,0,-0
-    `${content}` `${.Item1}` =,v,-0
+    `${items:Item0,Item1}`
+    `${Content}` `:Item0` 0,0,-0
+    `${Content}` `:Item1` =,v,-0
 
 ScrollableView
-  Background
-  HorizontalBar -6,0,4,-2
-    Thumb 2,2
-  ClipView `${content}` 2,2,-8,-2
-
+  ScrollBar -6,0,4,-2
+    ScrollThumb 2,2
+  ClipView 2,2,-8,-2
+    `${content}` 

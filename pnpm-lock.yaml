@@ -1,8 +1,12 @@
 lockfileVersion: 5.4
 
 specifiers:
+  blah: link:../blah
   typescript: ^4.6.4
   vite: ^3.2.3
+
+dependencies:
+  blah: link:../blah
 
 devDependencies:
   typescript: 4.9.3
