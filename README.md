@@ -1,11 +1,15 @@
 # Editor 23
 
+DropdownListItem
+  Hitbox `${on_click}`
+  
 
 Dropdown
   Hitbox `${on_click}`
   Text `${active}` 2,2
   Icon drop -8,0,8,-0
   List `${drops}`
+    DropdownListItem
 
 
 NavigationBack
@@ -24,11 +28,12 @@ ScrollableView
     Thumb 2,2
   ClipView `${content}` 2,2,-8,-2
 
+
 List
   ScrollableView
-    `${Item0 Item1}`
-    `${content}` `${Item0}` 0,0,-0
-    `${content}` `${Item1}` =,v,-0
+    `${items: Item0 Item1}`
+    `${content}` `${.Item0}` 0,0,-0
+    `${content}` `${.Item1}` =,v,-0
 
 GameViewListItem
   MiniGameView 2,2,20,-2
