@@ -12,6 +12,7 @@
     "blah": "link:../blah"
   },
   "devDependencies": {
+    "rollup-plugin-blayout": "link:../rollup-plugin-blayout",
     "typescript": "^4.6.4",
     "vite": "^3.2.3"
   }

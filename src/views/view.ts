@@ -6,9 +6,10 @@ export abstract class View {
 
   static ctors: Map<string, ViewCtor> = new Map()
 
-  constructor() {
-    View.ctors.set(this.constructor.name, this.constructor as ViewCtor)
+  static register = (_: ViewCtor) => {
+    View.ctors.set(_.name, _)
   }
+
 
   get_parent<T extends View>(ctor: { new(...args: any[]): T }): T | undefined {
     let { parent } = this

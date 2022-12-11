@@ -6,7 +6,7 @@ Dropdown
   Hitbox `.on_click`
   Text `.active` 2,2
   Icon drop -8,0,8,-0
-  `.is_open`
+  `.a_view_ref_to_show_when_is_open`
     List<DropdownListItem> `${drops}`
   Value `${selected_index}`
 

@@ -66,6 +66,7 @@ function parse_args(args: Array<string | Template>, combine: Array<Template>): A
       // `Hitbox `${on_click}` `
 
       let [Hitbox, ..._rest] = head.split(' ')
+      debugger
 
       let template_args = gen_template_args(_rest)
 
@@ -173,7 +174,8 @@ export default function gen(_: string) {
 function gen_top_template(res: Array<Template>): Template {
   let [head, ...rest] = res
 
+  let _ = head.fn({})
+  console.log(res)
 
-  console.log(head.fn)
-
+  return head
 }
